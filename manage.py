@@ -3,12 +3,10 @@
 import os
 import sys
 
-from core_weather_backend.settings.base import DJANGO_SETTINGS_MODULE
-
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core_weather_backend.settings.local')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core_weather_backend.settings.components')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
