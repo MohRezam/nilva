@@ -10,6 +10,6 @@ class FutureDayInline(admin.TabularInline):
 @admin.register(CurrentData)
 class WeatherDataAdmin(admin.ModelAdmin):
     inlines = [FutureHourInline, FutureDayInline]
-    list_display = ('location_name', 'date', 'latitude', 'longitude')
+    list_display = ('location_name', 'date', 'temp_now','latitude', 'longitude')
     search_fields = ('id', 'latitude', 'longitude')
     
